@@ -49,7 +49,10 @@ type: ['Tour Bus', 'Comedy Show', 'Festival', 'Surfing Lessons', 'None']
 },
 carRental: {
 type: String,
-enum: ['Sedan', 'SUV', 'Hybrid', 'Van']
+enum: ['Sedan', 'SUV', 'Hybrid', 'Van', 'None']
+},
+price: {
+  type: Number
 },
 reviews: [reviewSchema]
 

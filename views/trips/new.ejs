@@ -1,5 +1,5 @@
 
-
+<%- include('../partials/header') %>
         <form id="new-form" action="/trips" method = "POST">
           
 			<label>Location:
@@ -41,8 +41,12 @@
 					<option value="SUV">SUV</option>
 					<option value="Hybrid">Hybrid</option>
                     <option value="Van">Van</option>
+					<option value="None">None</option>
 					
 				</select>
+				<label>Price: $
+					<input type="number" name="price">
+				</label>
 			<input type="submit" value="Add Trip">
 		</form>
 

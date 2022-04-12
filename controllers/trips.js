@@ -25,7 +25,9 @@ function index(req, res) {
 
 function newTrip(req, res) {
     const newTrip = new Trip()
-    res.render('trips/new')
+    res.render('trips/new', {
+        title: 'Plan a Vacation!'
+    })
 }
   
 
