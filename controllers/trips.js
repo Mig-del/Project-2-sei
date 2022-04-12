@@ -2,6 +2,15 @@ const Trip = require('../models/trip');
 
 
 
+
+function show(req, res){
+    Trip.findById(req.params.id, function(err, trip){
+        res.render('trips/show', {
+            title: 'Trip Detail', trip: trip
+        })
+    })
+}
+
 function index(req, res) {
     Trip.find({}, function(err, trips){
         res.render('trips/index', {
@@ -14,22 +23,23 @@ function index(req, res) {
 
 
 
-
-function show(req, res){
-    Trip.findById(req.params.id, function(err,tripDb){
-        res.render('trips/show', { title: 'Your Reservations', trip: tripDb})
-    })
-}
-
-
-
-
-
 function newTrip(req, res) {
-    res.render("trips/new", { title: "Plan a Vacation" });
-  }
+    const newTrip = new Trip()
+    res.render('trips/new')
+}
   
 
+function create(req, res) {
+    const trip = new Trip(req.body);
+    trip.save(function (err){
+
+    
+    
+    if (err) return res.redirect('trips/new');
+    console.log(trip)
+    res.redirect('/trips')
+})
+}
 
 
 
@@ -40,5 +50,6 @@ function newTrip(req, res) {
 module.exports = {
     index,
     show,
-    new: newTrip
+    new: newTrip,
+    create
   };

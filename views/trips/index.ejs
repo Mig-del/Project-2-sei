@@ -1,22 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelPlanet </title>
-</head>
-<body>
-   <h1> <%= title %>  </h1>
-    <table>
-        <thead>
-            
-        </thead>
-        <tbody>
-           <a href="/trips/new">Plan a Vacation</a>
-            
-        </tbody>
-        
-    </table>
-</body>
-</html>
+<%- include('../partials/header') %>
+
+  <table id="list">
+      <thead>
+          <tr>
+              <th>Your Reservations</th>
+              
+          </tr>
+      </thead>
+      <tbody>
+          <% trips.forEach(function(t){ %> 
+          <tr>
+              <td><%= t.location %> </td>
+              <td><%= t.hotel %> </td>
+              <td><%= t.guest %> </td>
+              <td><%= t.checkIn %> </td>
+              <td><%= t.checkOut %> </td>
+              <td><%= t.activity %> </td>
+              <td><%= t.carRental %> </td>
+              <td><a href="/trips/<%= t._id %>">DETAILS</a></td>
+          </tr>    
+         <%  }); %> 
+      </tbody>
+  </table>
+    
+
+
+<%- include('../partials/footer') %>
