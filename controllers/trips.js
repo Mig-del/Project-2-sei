@@ -5,6 +5,7 @@ const Trip = require('../models/trip');
 
 function show(req, res){
     Trip.findById(req.params.id, function(err, trip){
+        
         res.render('trips/show', {
             title: 'Trip Detail', trip: trip
         })
@@ -45,6 +46,16 @@ function create(req, res) {
 
 
 
+// function deals(req, res) {
+//     Trip.find({}, function(err, trips){
+//         res.render('trips/deals', {
+//         trips,
+//         title: 'Welcome,'
+//         })
+//     })
+// }
+
+
 
 
 
@@ -53,5 +64,6 @@ module.exports = {
     index,
     show,
     new: newTrip,
-    create
+    create, 
+    // deals
   };

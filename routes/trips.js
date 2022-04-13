@@ -16,4 +16,5 @@ router.get('/:id', tripsCtrl.show);
 router.post('/', tripsCtrl.create);
 
 
+
 module.exports = router;

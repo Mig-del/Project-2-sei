@@ -1,0 +1,45 @@
+<%- include('../partials/header') %>
+
+  <table id="list">
+      <thead>
+          <div>
+            
+                <img src="images/shore.jpeg">
+              
+          </div>
+          <tr>
+              <th>Your Reservations</th>
+              
+          </tr>
+      </thead>
+      <tbody><tr id="toppers">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <th>Location </th>
+        <th>Hotel </th>
+        <th>Guest</th>
+        <th>Check<br>In </th>
+        <th>Chect<br>Out </th>
+        <th>Activity </th>
+        <th>Car<br>Rental </th>
+        <th>Price</th>
+    </tr>
+          <% trips.forEach(function(t){ %> 
+            
+          <tr>
+              <td><%= t.location %>    |</td>
+              <td><%= t.hotel %>       |</td>
+              <td><%= t.guest %> guest |</td>
+              <td><%= t.checkIn %>     |</td>
+              <td><%= t.checkOut %>    |</td>
+              <td><%= t.activity %>    |</td>
+              <td><%= t.carRental %>   |</td>
+              <td>$<%= t.price %>   |</td>
+              <td><a href="/trips/<%= t._id %>">DETAILS</a></td>
+          </tr>    
+         <%  }); %> 
+      </tbody>
+  </table>
+    
+
+
+<%- include('../partials/footer') %>
