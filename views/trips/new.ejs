@@ -1,55 +1,65 @@
 
 <%- include('../partials/header') %>
+<div class="container">
         <form id="new-form" action="/trips" method = "POST">
           
-			<label>Location:
-				<input type="text" name="location">
+			<label class="form-label">Location:
+				<input class="form-control" type="text" name="location">
 			</label>
-			<label>Hotel:
-				<select name="hotel">
+			<label class="form-label">Hotel:
+
+				<select class="form-select" aria-label="Choose Hotel">
+					<option selected>Choose Hotel</option>
 					<option value="Hilton">Hilton</option> 
 					<option value="Marriott">Marriott</option>
-					<option value="Hampton">Hampton</option>
 					<option value="Holiday Inn">Holiday Inn</option>
                     <option value="Best Western">Best Western</option>
                     <option value="Motel 6">Motel 6</option>
-				</select>
+				  </select>
+
+				
 			</label>
-            <label>Guest:
-                <input type="number" name="guest">
+            <label class="form-label">Guest:
+                <input class="form-control" type="number" name="guest">
             </label><br>
-			<label>Check-in:
-                    <input type="datetime-local" name="checkIn">			
+			<label class="form-label">Check-in:
+                    <input class="form-control" type="datetime-local" name="checkIn">			
 			</label>
-			<label>Check-Out:
-                    <input type="datetime-local" name="checkOut">
+			<label class="form-label">Check-Out:
+                    <input class="form-control" type="datetime-local" name="checkOut">
 			</label><br> 
-			<label>Activity:
-				<select name="activity">
-					<option style="display:none">
-					<option value="Tour Bus">Tour Bus</option> 
-					<option value="Comedy Show">Comedy Show</option>
-					<option value="Festival">Festival</option>
-                    <option value="Surfing Lessons">Surfing Lessons</option>
-					<option value="None">None</option>
+			
+			<label class="form-label">Activity:
+					<select class="form-select" aria-label="Rental">
+						<option selected>Choose Activity</option>
+						<option value="Tour Bus">Tour Bus</option> 
+						<option value="Comedy Show">Comedy Show</option>
+						<option value="Festival">Festival</option>
+						<option value="Surfing Lessons">Surfing Lessons</option>
+						<option value="None">None</option>
+					
 					
 				</select><br>
-			<label>Car Rental:
-				<select name="carRental">
-					<option style="display:none">
+
+				<label class="form-label">Car Rental:
+
+					<select class="form-select" aria-label="Rental">
+					<option selected>Rental</option>
 					<option value="Sedan">Sedan</option> 
 					<option value="SUV">SUV</option>
 					<option value="Hybrid">Hybrid</option>
                     <option value="Van">Van</option>
 					<option value="None">None</option>
-					
-				</select>
-				<label>Price: $
-					<input type="number" name="price">
-				</label>
-			<input type="submit" value="Add Trip">
-		</form>
+					  </select>
 
+
+			
+				<label class="form-label">Price: $
+					<input class="form-control" type="number" name="price">
+				</label>
+			<input class="form-control" type="submit" value="Add Trip">
+		</form>
+	</div>
 
 		<%- include('../partials/footer') %>
 	
