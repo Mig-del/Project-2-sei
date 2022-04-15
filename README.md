@@ -1,35 +1,27 @@
-# passport-boilerplate
+# TravelPlanet
+https://travelplanet.herokuapp.com/
+
+## Trello
+https://trello.com/b/XGmKJMqi/travelplanet
 
 
-This is your passport boilerplate.
 
-## Setup 
+### Technologies Used:
+##### Node.js
+##### HTML
+##### CSS / Bootstrap
+##### Express
+##### MongoDB
 
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
 
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin master` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin master`
+![Screen Shot 2022-04-15 at 7 31 17 AM](https://user-images.githubusercontent.com/93844738/163585917-3fef39f5-ce9f-469a-9805-995fc70bf0b4.png)
 
-#### Setup your login
 
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
 
-#### Make a commit 
+![Screen Shot 2022-04-15 at 7 33 08 AM](https://user-images.githubusercontent.com/93844738/163586127-c530516e-7e74-4c34-90f1-663b9e0e8464.png)
 
-```git commit -m "setup up oauth and User Model"```
+
+### Next Step Ideas:
+##### I would like to use an API that would add real vacation resorts with prices, actual pictures.
+##### Add a new page that shows more deals that you can add to your reservations instead of creating them yourself.
