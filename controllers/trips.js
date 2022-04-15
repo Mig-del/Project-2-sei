@@ -46,14 +46,6 @@ function create(req, res) {
 
 
 
-// function deals(req, res) {
-//     Trip.find({}, function(err, trips){
-//         res.render('trips/deals', {
-//         trips,
-//         title: 'Welcome,'
-//         })
-//     })
-// }
 
 
 
@@ -65,5 +57,5 @@ module.exports = {
     show,
     new: newTrip,
     create, 
-    // deals
+    
   };
