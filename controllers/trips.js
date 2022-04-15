@@ -42,6 +42,7 @@ function create(req, res) {
     
     if (err) return res.redirect('trips/new');
     console.log(trip)
+    console.log(err, '<-----here')
     res.redirect('/trips')
 })
 }
