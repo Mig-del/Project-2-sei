@@ -15,6 +15,6 @@ router.get('/new', tripsCtrl.new);
 router.get('/:id', tripsCtrl.show);
 router.post('/', tripsCtrl.create);
 
-
+// router.post('/trips/:id', tripsCtrl.create);
 
 module.exports = router;

@@ -27,6 +27,7 @@ function index(req, res) {
 function newTrip(req, res) {
     const newTrip = new Trip()
     res.render('trips/new', {
+        
         title: 'Plan a Vacation!'
     })
 }
@@ -36,7 +37,8 @@ function create(req, res) {
     const trip = new Trip(req.body);
     trip.save(function (err){
 
-    
+        // display name in welcome page
+        // req.body.userName = req.user.name;
     
     if (err) return res.redirect('trips/new');
     console.log(trip)

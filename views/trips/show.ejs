@@ -1,43 +1,46 @@
 
 <%- include('../partials/header') %>
+<body class="water">
 
-
-<section id="show-page">
-    <div>Location:
-        <%= trip.location%> 
-    </div><br>
-    <div>Hotel:
-        <%= trip.hotel%> 
-    </div><br>
-    <div>Guest:
-        <%= trip.guest%> 
-    </div><br>
-    <div>Check-In:
-        <%= trip.checkIn%> 
-    </div><br>
-    <div>Check-Out:
-       <%= trip.checkOut%>
-    </div><br>
-    <div>Activity:
-        <%= trip.activity%> 
-    </div><br>
-    <div>Car Rental:
-        <%= trip.carRental%> 
-    </div><br>
-    <div>Price: $
-        <%= trip.price %> 
+<div class="container">
+<div class="d-inline-flex p-2 bd-highlight ">Location:<br></Location:br><%= trip.location%> </div><br>
+<div class="d-inline-flex p-2 bd-highlight">Hotel:<br><%= trip.hotel%> </div><br>
+<div class="d-inline-flex p-2 bd-highlight">Guest:<br>
+  <%= trip.guest%> 
+</div><br>
+<div class="d-inline-flex p-2 bd-highlight">Check-In:<br>
+  <%= trip.checkIn%>  
+  </div><br>
+<div class="d-inline-flex p-2 bd-highlight">Check-Out:<br>
+  <%= trip.checkOut%> 
+</div><br>
+<div class="d-inline-flex p-2 bd-highlight">Activity:<br>
+  <%= trip.activity%>  
+</div><br>
+<div class="d-inline-flex p-2 bd-highlight">Car Rental:<br>
+  <%= trip.carRental%>  
+</div><br>
+<div class="d-inline-flex p-2 bd-highlight">price: <br>$ <%= trip.price %>  
     </div>
+  </div>
 
+ 
+
+
+
+   
     <!-- add to vacations button or "+"-->
-<br><br>
-<h2>Share your Experience!</h2>
+<br>
+
 
     <% if (user) { %>
+      <div class="container">
+
 
         <form id="add-review-form" method="POST" action="/trips/<%= trip._id %>/reviews">
-            
+          <h2>Share your Experience!</h2><br>
           <label>Review:</label>
-          <textarea name="content"></textarea>
+          <textarea name="content"></textarea><br>
           <label>Rating:</label>
           <select name="rating">
             <option value="1">1</option>
@@ -51,33 +54,27 @@
     <% } %> 
 
         <% if (trip.reviews.length) { %>
-            <table>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Review</th>
-                  <th>Rating</th>
-                </tr>
-              </thead>
+            <table class="review">
+              
               <tbody>
                 <% let total=0 %>
                   <% trip.reviews.forEach(function(r) { %>
                     <% total +=r.rating %>
                       <tr>
-                        <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>"><%= r.userName %></td>
-                        <td>
+                        <td class="review-user"><img class="rounded-circle" alt="avatar" src="<%= r.userAvatar %>"><br><%= r.userName %></td> <br>
+                         <td class="space"><b>Date </b><br>
                           <%= r.createdAt.toLocaleDateString() %>
-                        </td>
-                        <td>
+                        </td><br>
+                         <td class="space"><b>Review </b><br>
                           <%= r.content %>
-                        </td>
-                        <td>
+                        </td><br>
+                         <td class="space"><b>Rating</b><br>
                           <%= r.rating %>
                         </td>
-                        <td>
+                         <td class="space">
                           <% if (user && user._id.equals(r.user)) { %>
                             <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-                              <button type="submit">X</button>
+                              <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                           <% } %>
                         </td>
@@ -94,7 +91,10 @@
             <% } else { %>
               <h5>No Reviews Yet</h5>
               <% } %>
+            </div>
 
+          
+          </body>
               <%- include('../partials/footer') %>
         
-    
+             

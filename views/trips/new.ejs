@@ -1,11 +1,12 @@
 
 <%- include('../partials/header') %>
+<body id="background">
+	
+
 <div class="container">
         <form id="new-form" action="/trips" method = "POST">
-          
-<div><img src="images/sunset-pool.webp"></div>
+			<h1 class="card-title-new text-center">Plan your Vacation</h1>
 
-			
 			<label class="form-label">Location:
 				<input class="form-control" type="text" name="location">
 			</label>
@@ -63,6 +64,6 @@
 			<input class="form-control" type="submit" value="Add Trip">
 		</form>
 	</div>
-
+</body>
 		<%- include('../partials/footer') %>
 	

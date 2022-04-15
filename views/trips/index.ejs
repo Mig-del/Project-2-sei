@@ -1,5 +1,8 @@
 <%- include('../partials/header') %>
-<% if (user) { %>
+<body class="water">
+  
+
+
 <div class="container">
   <table class="table table-striped">
     
@@ -12,9 +15,13 @@
               <div class="card bg-dark text-black">
                 <img src="images/shore.jpg" class="card-img">
                 <div class="card-img-overlay">
-                  <h5 class="card-title text-center">Welcome,</h5>
+                  <% if (user) { %>
+                  <h3 class="card-title text-center">Welcome, <%= (user.name)  %> </h3>
+                
+                   
                  
-                </div>
+                 
+                
               </div>
 
           </tr>
@@ -42,7 +49,7 @@
               <td><%= t.activity %> </td>
               <td><%= t.carRental %></td>
               <td>$<%= t.price %> </td>
-              <td><a href="/trips/<%= t._id %>">DETAILS</a></td>
+              <td><a class="detail" href="/trips/<%= t._id %>">DETAILS</a></td>
           </tr>    
          <%  }); %> 
       </tbody>
@@ -50,6 +57,7 @@
     
 </div>
 <% } %> 
+</body>
 <%- include('../partials/footer') %>
 
 

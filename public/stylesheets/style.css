@@ -1,3 +1,66 @@
 .card-title {
-  margin-top: 30px;
+  margin-top: 50px;
+  font-family: cursive;
+}
+
+.card-title-new {
+  margin-top: 100px;
+  margin-bottom: 60px;
+  font-family: cursive;
+}
+
+#background {
+  background-image: url('../../images/sunset-pool.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.form-label {
+ text-align: center;
+  font-weight: bold;
+}
+.form-control {
+  text-align: center;
+  opacity: .8;
+}
+.form-select {
+
+  opacity: .8;
+  
+}
+
+#new-form {
+ text-align: center;
+}
+
+.water {
+  background-image: url('../../images/water.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.navbar {
+  opacity: .7;
+}
+
+.review {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.review-user {
+  margin-right: 10px;
+}
+
+.space {
+  margin-left: 50px;
+}
+
+.detail {
+  color: black;
+  background-color: rgb(108, 127, 133);
+  margin: 10px;
 }
